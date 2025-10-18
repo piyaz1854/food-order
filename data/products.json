@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "Pizza Margherita", "category": "Pizza", "price": 2200, "image": "https://via.placeholder.com/150"},
+  {"id": 2, "name": "Caesar Salad", "category": "Salads", "price": 1500, "image": "https://via.placeholder.com/150"},
+  {"id": 3, "name": "Cheeseburger", "category": "Burgers", "price": 1800, "image": "https://via.placeholder.com/150"}
+]
