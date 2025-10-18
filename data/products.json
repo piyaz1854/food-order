@@ -1,5 +1,6 @@
 [
-  {"id": 1, "name": "Pizza Margherita", "category": "Pizza", "price": 2200, "image": "/assets/images/pizza.jpg"},
+  {"id": 1, "name": "Pizza Margherita", "category": "Pizza", "price": 2200, "image": "/assets/images/pizza_m.jpg"},
   {"id": 2, "name": "Caesar Salad", "category": "Salads", "price": 1500, "image": "/assets/images/caesar_salad.jpg"},
-  {"id": 3, "name": "Cheeseburger", "category": "Burgers", "price": 1800, "image": "/assets/images/cheese_burger.jpg"}
+  {"id": 3, "name": "Cheeseburger", "category": "Burgers", "price": 1800, "image": "/assets/images/cheese_burger.jpg"},
+  {"id": 4, "name": "Pizza Pepperoni", "category": "Pizza", "price": 2300, "image": "/assets/images/pizza_p.jpg"}
 ]
