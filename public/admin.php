@@ -33,12 +33,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_item'])) {
 
 <h3>All Orders</h3>
 <table border="1" cellpadding="5">
-  <tr><th>Name</th><th>Dish</th><th>Time</th></tr>
+  <tr>
+    <th>Name</th>
+    <th>Ordered Dishes</th>
+    <th>Total (₸)</th>
+    <th>Time</th>
+  </tr>
   <?php foreach ($orders as $o): ?>
     <tr>
-      <td><?= htmlspecialchars($o['name']) ?></td>
-      <td><?= htmlspecialchars($o['dish']) ?></td>
-      <td><?= htmlspecialchars($o['time']) ?></td>
+      <td><?= htmlspecialchars($o['name'] ?? '') ?></td>
+      <td><?= htmlspecialchars($o['dishes'] ?? ($o['dish'] ?? '')) ?></td>
+      <td><strong><?= htmlspecialchars($o['total'] ?? '—') ?></strong></td>
+      <td><?= htmlspecialchars($o['time'] ?? '') ?></td>
     </tr>
   <?php endforeach; ?>
 </table>

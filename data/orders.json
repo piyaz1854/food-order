@@ -1,12 +1,32 @@
 [
     {
         "name": "Abylaikhan",
-        "dish": "Pizza",
-        "time": "2025-10-18 12:19:03"
+        "dishes": "Pizza Margherita, Coca Cola, Pizza Hawaiian, Pizza Margherita, Pizza Margherita, Pizza Margherita",
+        "total": 12300,
+        "time": "2025-10-18 15:11:36"
     },
     {
         "name": "Alikhan",
-        "dish": "Pasta",
-        "time": "2025-10-18 12:19:20"
+        "dishes": "Pizza Margherita",
+        "total": 2200,
+        "time": "2025-10-18 15:15:20"
+    },
+    {
+        "name": "Alikhan",
+        "dishes": "Pizza Margherita, Fanta",
+        "total": 2700,
+        "time": "2025-10-18 15:16:04"
+    },
+    {
+        "name": "Alikhan",
+        "dishes": "Chicken Cheeseburger",
+        "total": 1500,
+        "time": "2025-10-18 15:20:58"
+    },
+    {
+        "name": "Abylaikhan",
+        "dishes": "Pizza Margherita, Water",
+        "total": 2500,
+        "time": "2025-10-18 15:26:53"
     }
 ]

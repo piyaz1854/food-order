@@ -1,11 +1,16 @@
-<?php include("../includes/header.php"); ?>
+<?php
+session_start();
+
+include("../includes/header.php");
+?>
+
 <h2>Our Menu</h2>
 
 <?php
 $products = json_decode(file_get_contents("../data/products.json"), true);
 $category = $_GET['category'] ?? '';
 
-if ($category) {
+if (!empty($category)) {
     $products = array_filter($products, fn($item) => $item['category'] === $category);
 }
 
@@ -26,6 +31,11 @@ foreach ($products as $item) {
             <h3>{$item['name']}</h3>
             <p>{$item['category']}</p>
             <p><strong>{$item['price']} ₸</strong></p>
+            <form method='post' action='order.php'>
+                <input type='hidden' name='dish' value='{$item['name']}'>
+                <input type='hidden' name='price' value='{$item['price']}'>
+                <button type='submit' name='add'>🛒 Add to Order</button>
+            </form>
           </div>";
 }
 echo '</div>';
