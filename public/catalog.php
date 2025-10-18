@@ -11,10 +11,11 @@ if ($category) {
 
 echo '<form method="get">';
 echo '<select name="category" onchange="this.form.submit()">';
-echo '<option value="">All Categories</option>';
-echo '<option value="Pizza">Pizza</option>';
-echo '<option value="Salads">Salads</option>';
-echo '<option value="Burgers">Burgers</option>';
+echo '<option value=""' . ($category === '' ? ' selected' : '') . '>All Categories</option>';
+echo '<option value="Pizzas"' . ($category === 'Pizzas' ? ' selected' : '') . '>Pizzas</option>';
+echo '<option value="Salads"' . ($category === 'Salads' ? ' selected' : '') . '>Salads</option>';
+echo '<option value="Burgers"' . ($category === 'Burgers' ? ' selected' : '') . '>Burgers</option>';
+echo '<option value="Drinks"' . ($category === 'Drinks' ? ' selected' : '') . '>Drinks</option>';
 echo '</select>';
 echo '</form>';
 

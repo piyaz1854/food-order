@@ -1,6 +1,17 @@
 [
-  {"id": 1, "name": "Pizza Margherita", "category": "Pizza", "price": 2200, "image": "/assets/images/pizza_m.jpg"},
-  {"id": 2, "name": "Caesar Salad", "category": "Salads", "price": 1500, "image": "/assets/images/caesar_salad.jpg"},
-  {"id": 3, "name": "Cheeseburger", "category": "Burgers", "price": 1800, "image": "/assets/images/cheese_burger.jpg"},
-  {"id": 4, "name": "Pizza Pepperoni", "category": "Pizza", "price": 2300, "image": "/assets/images/pizza_p.jpg"}
+  {"id": 1, "name": "Pizza Margherita", "category": "Pizzas", "price": 2200, "image": "/assets/images/pizza_margherita.jpg"},
+  {"id": 2, "name": "Pizza Pepperoni", "category": "Pizzas", "price": 2300, "image": "/assets/images/pizza_pepperoni.jpg"},
+  {"id": 3, "name": "Pizza Hawaiian", "category": "Pizzas", "price": 3000, "image": "/assets/images/pizza_hawaii.jpg"},
+  {"id": 4, "name": "Pizza Mushroom", "category": "Pizzas", "price": 2500, "image": "/assets/images/pizza_mushroom.jpg"},
+  {"id": 5, "name": "Chicken Burger", "category": "Burgers", "price": 1400, "image": "/assets/images/chicken_burger.jpg"},
+  {"id": 6, "name": "Chicken Cheeseburger", "category": "Burgers", "price": 1500, "image": "/assets/images/chicken_cheeseburger.jpg"},
+  {"id": 7, "name": "Beef Burger", "category": "Burgers", "price": 1600, "image": "/assets/images/beef_burger.jpg"},
+  {"id": 8, "name": "Beef Cheeseburger", "category": "Burgers", "price": 1700, "image": "/assets/images/beef_cheeseburger.jpg"},
+  {"id": 9, "name": "Caesar Salad", "category": "Salads", "price": 1500, "image": "/assets/images/caesar_salad.jpg"},
+  {"id": 10, "name": "Olivier Salad", "category": "Salads", "price": 1300, "image": "/assets/images/olivier_salad.jpg"},
+  {"id": 11, "name": "Vinaigrette Salad", "category": "Salads", "price": 1000, "image": "/assets/images/vinaigrette_salad.jpg"},
+  {"id": 12, "name": "Coca Cola", "category": "Drinks", "price": 500, "image": "/assets/images/coca_cola.jpg"},
+  {"id": 12, "name": "Fanta", "category": "Drinks", "price": 500, "image": "/assets/images/fanta.jpg"},
+  {"id": 12, "name": "Sprite", "category": "Drinks", "price": 500, "image": "/assets/images/sprite.jpg"},
+  {"id": 12, "name": "Water", "category": "Drinks", "price": 300, "image": "/assets/images/water.jpg"}
 ]
