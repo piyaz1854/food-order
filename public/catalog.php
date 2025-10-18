@@ -29,13 +29,14 @@ foreach ($products as $item) {
     echo "<div class='card'>
             <img src='{$item['image']}' alt='{$item['name']}'>
             <h3>{$item['name']}</h3>
-            <p>{$item['category']}</p>
-            <p><strong>{$item['price']} ₸</strong></p>
             <form method='post' action='order.php'>
                 <input type='hidden' name='dish' value='{$item['name']}'>
                 <input type='hidden' name='price' value='{$item['price']}'>
                 <button type='submit' name='add'>🛒 Add to Order</button>
             </form>
+                <a href='detail.php?name=" . urlencode($item['name']) . "'>
+                <button style='margin-top:6px;'>ℹ More Info</button>
+            </a>
           </div>";
 }
 echo '</div>';

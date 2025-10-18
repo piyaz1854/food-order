@@ -28,5 +28,23 @@
         "dishes": "Pizza Margherita, Water",
         "total": 2500,
         "time": "2025-10-18 15:26:53"
+    },
+    {
+        "name": "Abylaikhan",
+        "dishes": "Pizza Margherita",
+        "total": 2200,
+        "time": "2025-10-18 15:55:30"
+    },
+    {
+        "name": "Abylaikhan",
+        "dishes": "Pizza Mushroom, Olivier Salad",
+        "total": 3800,
+        "time": "2025-10-18 16:10:10"
+    },
+    {
+        "name": "Abylaikhan",
+        "dishes": "Pizza Margherita, Olivier Salad, Sprite",
+        "total": 4000,
+        "time": "2025-10-18 16:22:57"
     }
 ]
