@@ -8,7 +8,7 @@ footer { background: #333; color: white; text-align: center; padding: 10px; }
 .banner .btn { background: #457b9d; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
 .menu { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 .card { background: white; border-radius: 8px; padding: 10px; width: 180px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.card img { width: 150px; height: 150px; object-fit: cover; }
+.card img { width: 50px; height: 50px; object-fit: cover; }
 form { max-width: 300px; margin: 20px auto; display: flex; flex-direction: column; gap: 10px; }
 input, select, button { padding: 8px; font-size: 16px; }
 .success { color: green; }

@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "name": "Abylaikhan",
+        "dish": "Pizza",
+        "time": "2025-10-18 12:19:03"
+    },
+    {
+        "name": "Alikhan",
+        "dish": "Pasta",
+        "time": "2025-10-18 12:19:20"
+    }
+]
