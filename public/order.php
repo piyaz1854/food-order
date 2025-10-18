@@ -1,5 +1,6 @@
 <?php
 include("../includes/header.php");
+date_default_timezone_set('Asia/Almaty');
 
 if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
 
