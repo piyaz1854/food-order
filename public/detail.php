@@ -5,7 +5,6 @@ $products = json_decode(file_get_contents("../data/products.json"), true);
 $name = $_GET['name'] ?? '';
 $product = null;
 
-// Поиск блюда по имени
 foreach ($products as $p) {
     if ($p['name'] === $name) {
         $product = $p;
