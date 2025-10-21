@@ -4,8 +4,33 @@ A simple multi-page restaurant website built with **PHP**, **HTML/CSS**, and **J
 Users can browse the menu, filter items, place an order, and view a confirmation.  
 An admin page shows all incoming orders.
 
+
+Frontend Developer – layout, CSS, navigation, responsive design
+
+Backend Developer – PHP logic, filters, form validation, JSON read/write
+
+Content Manager – fill JSON files, prepare images, testing, screenshots, report writing
+
+
+Roles:
+Abylaikhan - Frontend Developer, Backend Developer
+Alikhan - Content manager, Project Presenter
+
+
 ---
+Let's look at the main pages of our website
+Home page:
+<img width="1440" height="385" alt="Screenshot 2025-10-21 at 08 33 33" src="https://github.com/user-attachments/assets/de3f6d86-3588-4e96-adb6-ccc6851b8b94" />
+
+Menu page:
 <img width="1437" height="778" alt="Screenshot 2025-10-21 at 08 28 31" src="https://github.com/user-attachments/assets/b8bf76aa-6e4f-46d1-a17e-f48943f0f748" />
+
+Order page:
+<img width="1440" height="795" alt="Screenshot 2025-10-21 at 08 34 16" src="https://github.com/user-attachments/assets/e9e2fda2-e10c-4819-9950-273cc9a474c5" />
+
+Admin panel:
+<img width="1438" height="735" alt="Screenshot 2025-10-21 at 08 34 41" src="https://github.com/user-attachments/assets/a1baadfb-7905-4215-a191-3374da945b43" />
+
 
 ## 1) Quick start
 
@@ -75,11 +100,5 @@ Fill in the order form (name, phone, address, quantity) → Submit.
 
 See success message with calculated total.
 
-
-Frontend Developer – layout, CSS, navigation, responsive design
-
-Backend Developer – PHP logic, filters, form validation, JSON read/write
-
-Content Manager – fill JSON files, prepare images, testing, screenshots, report writing
 
 Open Admin to confirm the order is saved.
