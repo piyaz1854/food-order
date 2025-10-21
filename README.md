@@ -5,6 +5,7 @@ Users can browse the menu, filter items, place an order, and view a confirmation
 An admin page shows all incoming orders.
 
 ---
+<img width="1437" height="778" alt="Screenshot 2025-10-21 at 08 28 31" src="https://github.com/user-attachments/assets/b8bf76aa-6e4f-46d1-a17e-f48943f0f748" />
 
 ## 1) Quick start
 
