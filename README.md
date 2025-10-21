@@ -35,7 +35,7 @@ Then open: http://localhost:8000
 /data
   products.json
   orders.json
-
+```
 
 Home — /public/index.php
 Contains a banner and several featured dishes.
