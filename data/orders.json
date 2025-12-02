@@ -16,5 +16,11 @@
         "dishes": "Pizza Margherita, Pizza Hawaiian, Pizza Hawaiian",
         "total": 8200,
         "time": "2025-12-02 17:02:12"
+    },
+    {
+        "name": "nurik",
+        "dishes": "Pizza Pepperoni, Pizza Pepperoni",
+        "total": 4600,
+        "time": "2025-12-02 17:29:07"
     }
 ]

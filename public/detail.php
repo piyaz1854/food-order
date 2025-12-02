@@ -11,32 +11,55 @@ foreach ($products as $p) {
         break;
     }
 }
+
+$turtleNote = '';
+if ($product && isset($product['category']) && $product['category'] === 'Pizzas') {
+    $turtleNote = "Classic choice for hungry ninja turtles.";
+}
 ?>
 
-<main style="text-align:center; margin-top:40px;">
+<section class="home-section detail-section">
 <?php if ($product): ?>
-    <h2><?= htmlspecialchars($product['name']) ?></h2>
-    <img src="<?= htmlspecialchars($product['image']) ?>" width="250" height="250" style="border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"><br><br>
-    
-    <p><strong>Category:</strong> <?= htmlspecialchars($product['category']) ?></p>
-    <p><strong>Price:</strong> <?= htmlspecialchars($product['price']) ?> ₸</p>
+    <div class="card card-detail">
+        <h2><?= htmlspecialchars($product['name']) ?></h2>
 
-    <form method="post" action="order.php" style="margin-top:20px;">
-        <input type="hidden" name="dish" value="<?= htmlspecialchars($product['name']) ?>">
-        <input type="hidden" name="price" value="<?= htmlspecialchars($product['price']) ?>">
-        <button type="submit" name="add" style="background-color:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
-            🛒 Add to Order
-        </button>
-    </form>
+        <img
+            src="<?= htmlspecialchars($product['image']) ?>"
+            alt="<?= htmlspecialchars($product['name']) ?>"
+        >
 
-    <br>
-    <a href="catalog.php" style="text-decoration:none;">
-        <button style="background-color:#2196F3;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">⬅ Back to Menu</button>
-    </a>
+        <p style="font-size:14px;margin:6px 0;">
+            <strong>Category:</strong>
+            <?= htmlspecialchars($product['category']) ?>
+        </p>
+        <p style="font-size:14px;margin:4px 0 10px;">
+            <strong>Price:</strong>
+            <?= (int)$product['price'] ?> ₸
+        </p>
 
+        <?php if ($turtleNote): ?>
+            <p class="detail-note">
+                🐢 <?= htmlspecialchars($turtleNote) ?>
+            </p>
+        <?php endif; ?>
+
+        <form method="post" action="order.php" style="margin-top:10px;">
+            <input type="hidden" name="dish" value="<?= htmlspecialchars($product['name']) ?>">
+            <input type="hidden" name="price" value="<?= (int)$product['price'] ?>">
+            <button type="submit" name="add">
+                🍕 Add to Order
+            </button>
+        </form>
+
+        <a href="catalog.php" style="text-decoration:none;">
+            <button type="button" style="margin-top:8px;">
+                ⬅ Back to Menu
+            </button>
+        </a>
+    </div>
 <?php else: ?>
-    <p style="color:red;">Product not found.</p>
+    <p style="color:#f97316;">Product not found.</p>
 <?php endif; ?>
-</main>
+</section>
 
 <?php include("../includes/footer.php"); ?>
