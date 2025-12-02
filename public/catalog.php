@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+require_once "../includes/auth.php";
 include("../includes/header.php");
 ?>
 
@@ -34,8 +33,8 @@ foreach ($products as $item) {
                 <input type='hidden' name='price' value='{$item['price']}'>
                 <button type='submit' name='add'>🛒 Add to Order</button>
             </form>
-                <a href='detail.php?name=" . urlencode($item['name']) . "'>
-                <button style='margin-top:6px;'>ℹ More Info</button>
+            <a href='detail.php?name=" . urlencode($item['name']) . "'>
+                <button style='margin-top:6px;'> More Info</button>
             </a>
           </div>";
 }

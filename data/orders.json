@@ -10,5 +10,11 @@
         "dishes": "Pizza Mushroom, Vinaigrette Salad, Sprite",
         "total": 4000,
         "time": "2025-10-18 21:34:01"
+    },
+    {
+        "name": "supeke",
+        "dishes": "Pizza Margherita, Pizza Hawaiian, Pizza Hawaiian",
+        "total": 8200,
+        "time": "2025-12-02 17:02:12"
     }
 ]

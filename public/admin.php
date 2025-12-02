@@ -1,20 +1,30 @@
-<?php include("../includes/header.php"); ?>
+<?php
+require_once "../includes/auth.php";
+
+
+if (!is_admin()) {
+    header("Location: login.php");
+    exit;
+}
+
+include("../includes/header.php");
+?>
 <h2>Admin Panel</h2>
 
 <?php
 $productsFile = "../data/products.json";
-$ordersFile = "../data/orders.json";
+$ordersFile   = "../data/orders.json";
 
 $products = json_decode(file_get_contents($productsFile), true);
-$orders = json_decode(file_get_contents($ordersFile), true);
+$orders   = json_decode(file_get_contents($ordersFile), true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_item'])) {
     $products[] = [
-        "id" => count($products) + 1,
-        "name" => $_POST['name'],
+        "id"       => count($products) + 1,
+        "name"     => $_POST['name'],
         "category" => $_POST['category'],
-        "price" => (int)$_POST['price'],
-        "image" => $_POST['image']
+        "price"    => (int)$_POST['price'],
+        "image"    => $_POST['image']
     ];
     file_put_contents($productsFile, json_encode($products, JSON_PRETTY_PRINT));
     echo "<p class='success'>Item added!</p>";

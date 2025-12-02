@@ -1,4 +1,5 @@
 <?php
+require_once "../includes/auth.php";
 include("../includes/header.php");
 date_default_timezone_set('Asia/Almaty');
 
@@ -6,7 +7,7 @@ if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
 
 if (isset($_POST['add'])) {
     $_SESSION['cart'][] = [
-        'dish' => $_POST['dish'],
+        'dish'  => $_POST['dish'],
         'price' => (int)$_POST['price']
     ];
     echo "<script>window.location.href='order.php';</script>";
@@ -30,24 +31,31 @@ if (isset($_POST['clear'])) {
 }
 
 if (isset($_POST['submit'])) {
+    // проверка логина
+    if (!is_logged_in()) {
+        echo "<script>alert('To place an order, please log in.'); window.location.href='login.php';</script>";
+        exit;
+    }
+
     $name = trim($_POST['name']);
+
     if (!empty($name) && !empty($_SESSION['cart'])) {
-        $total = 0;
+        $total  = 0;
         $dishes = [];
 
         foreach ($_SESSION['cart'] as $item) {
             $dishes[] = $item['dish'];
-            $total += $item['price'];
+            $total   += $item['price'];
         }
 
         $orders = json_decode(file_get_contents("../data/orders.json"), true);
         if (!is_array($orders)) $orders = [];
 
         $orders[] = [
-            "name" => $name,
+            "name"   => $name,
             "dishes" => implode(", ", $dishes),
-            "total" => $total,
-            "time" => date("Y-m-d H:i:s")
+            "total"  => $total,
+            "time"   => date("Y-m-d H:i:s")
         ];
 
         file_put_contents("../data/orders.json", json_encode($orders, JSON_PRETTY_PRINT));
