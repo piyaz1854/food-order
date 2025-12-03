@@ -3,21 +3,31 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 require_once __DIR__ . '/auth.php';
+
+$pageTitle = $pageTitle ?? 'FoodOrder';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FoodOrder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title><?= htmlspecialchars($pageTitle) ?></title>
+
   <link rel="stylesheet" href="../assets/style.css">
+
+  <script src="../assets/js/data.js" defer></script>
+  <script src="../assets/js/services.js" defer></script>
+  <script src="../assets/js/ui.js" defer></script>
+  <script src="../assets/js/events.js" defer></script>
 </head>
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo">
+    <a href="index.php" class="logo">
       <span class="logo-mark">FO</span>
       <span class="logo-text">FoodOrder</span>
-    </div>
+    </a>
+
     <nav class="main-nav">
       <a href="index.php">Home</a>
       <a href="catalog.php">Menu</a>
@@ -35,4 +45,5 @@ require_once __DIR__ . '/auth.php';
     </nav>
   </div>
 </header>
+
 <main class="page-content">

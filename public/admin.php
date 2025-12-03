@@ -1,7 +1,6 @@
 <?php
 require_once "../includes/auth.php";
 
-
 if (!is_admin()) {
     header("Location: login.php");
     exit;
