@@ -4,5 +4,11 @@
         "username": "superman",
         "password": "$2y$12$DmDOoHvX.LdWAssjN.lQ6eokVql\/smpjBpNEaLXDQQHUIl8iYb\/0e",
         "role": "admin"
+    },
+    {
+        "id": 2,
+        "username": "amanabylaikhan",
+        "password": "$2y$12$XS.z\/XGyBgJrXx\/65oBkpOM9IOt7YGXOQ4oRFKtNJMhUYWREJsHi2",
+        "role": "admin"
     }
 ]

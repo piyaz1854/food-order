@@ -4,139 +4,159 @@
         "name": "Pizza Margherita",
         "category": "Pizzas",
         "price": 2200,
-        "image": "\/assets\/images\/pizza_margherita.jpg"
+        "image": "/assets/images/pizza_margherita.jpg",
+        "description": "Mozzarella cheese, tomato sauce, basil leaves"
     },
     {
         "id": 2,
         "name": "Pizza Pepperoni",
         "category": "Pizzas",
         "price": 2300,
-        "image": "\/assets\/images\/pizza_pepperoni.jpg"
+        "image": "/assets/images/pizza_pepperoni.jpg",
+        "description": "Pepperoni slices, mozzarella cheese, tomato sauce, Italian herbs"
     },
     {
         "id": 3,
         "name": "Pizza Hawaiian",
         "category": "Pizzas",
         "price": 3000,
-        "image": "\/assets\/images\/pizza_hawaii.jpg"
+        "image": "/assets/images/pizza_hawaii.jpg",
+        "description": "Chicken ham, pineapple chunks, mozzarella cheese, tomato sauce"
     },
     {
         "id": 4,
         "name": "Pizza Mushroom",
         "category": "Pizzas",
         "price": 2500,
-        "image": "\/assets\/images\/pizza_mushroom.jpg"
+        "image": "/assets/images/pizza_mushroom.jpg",
+        "description": "Fresh mushrooms, mozzarella cheese, creamy tomato sauce"
     },
     {
         "id": 5,
         "name": "Pizza 99 Cheese",
         "category": "Pizzas",
         "price": 2600,
-        "image": "\/assets\/images\/99cheese.jpg"
+        "image": "/assets/images/99cheese.jpg",
+        "description": "Blend of 99 cheeses including mozzarella, gouda, parmesan, and blue cheese"
     },
     {
         "id": 6,
         "name": "Pizza Marinara",
         "category": "Pizzas",
         "price": 2200,
-        "image": "\/assets\/images\/marinara.jpg"
+        "image": "/assets/images/marinara.jpg",
+        "description": "Garlic-tomato sauce, oregano, olive oil — classic Neapolitan flavor"
     },
     {
         "id": 7,
         "name": "Pizza Capricciosa",
         "category": "Pizzas",
         "price": 2800,
-        "image": "\/assets\/images\/capricciosa.jpg"
+        "image": "/assets/images/capricciosa.jpg",
+        "description": "Ham, mushrooms, artichokes, black olives, mozzarella"
     },
     {
         "id": 8,
         "name": "Pizza Mexican",
         "category": "Pizzas",
         "price": 2500,
-        "image": "\/assets\/images\/mexican.jpg"
+        "image": "/assets/images/mexican.jpg",
+        "description": "Spicy beef, jalapeños, red sauce, mozzarella, Mexican herbs"
     },
     {
         "id": 9,
         "name": "Chicken Burger",
         "category": "Burgers",
         "price": 1400,
-        "image": "\/assets\/images\/chicken_burger.jpg"
+        "image": "/assets/images/chicken_burger.jpg",
+        "description": "Crispy chicken fillet, lettuce, tomato, cheese, sesame bun"
     },
     {
         "id": 10,
         "name": "Chicken Cheeseburger",
         "category": "Burgers",
         "price": 1500,
-        "image": "\/assets\/images\/chicken_cheeseburger.jpg"
+        "image": "/assets/images/chicken_cheeseburger.jpg",
+        "description": "Chicken patty, double cheese, pickles, burger sauce, sesame bun"
     },
     {
         "id": 11,
         "name": "Beef Burger",
         "category": "Burgers",
         "price": 1600,
-        "image": "\/assets\/images\/beef_burger.jpg"
+        "image": "/assets/images/beef_burger.jpg",
+        "description": "Juicy beef patty, lettuce, tomato, onions, signature sauce"
     },
     {
         "id": 12,
         "name": "Beef Cheeseburger",
         "category": "Burgers",
         "price": 1700,
-        "image": "\/assets\/images\/beef_cheeseburger.jpg"
+        "image": "/assets/images/beef_cheeseburger.jpg",
+        "description": "Beef patty, double cheddar, pickles, onions, burger sauce"
     },
     {
         "id": 13,
         "name": "Caesar Salad",
         "category": "Salads",
         "price": 1500,
-        "image": "\/assets\/images\/caesar_salad.jpg"
+        "image": "/assets/images/caesar_salad.jpg",
+        "description": "Crispy lettuce, grilled chicken, parmesan, croutons, Caesar dressing"
     },
     {
         "id": 14,
         "name": "Olivier Salad",
         "category": "Salads",
         "price": 1300,
-        "image": "\/assets\/images\/olivier_salad.jpg"
+        "image": "/assets/images/olivier_salad.jpg",
+        "description": "Potatoes, carrots, peas, pickles, eggs, chicken, mayonnaise"
     },
     {
         "id": 15,
         "name": "Vinaigrette Salad",
         "category": "Salads",
         "price": 1000,
-        "image": "\/assets\/images\/vinaigrette_salad.jpg"
+        "image": "/assets/images/vinaigrette_salad.jpg",
+        "description": "Beetroot, potatoes, carrots, peas, pickles, vegetable oil"
     },
     {
         "id": 16,
         "name": "Herring under a fur coat Salad",
         "category": "Salads",
         "price": 2000,
-        "image": "\/assets\/images\/herring.jpg"
+        "image": "/assets/images/herring.jpg",
+        "description": "Herring fillet, beetroot, potatoes, carrots, eggs, mayonnaise layers"
     },
     {
         "id": 17,
         "name": "Coca Cola",
         "category": "Drinks",
         "price": 500,
-        "image": "\/assets\/images\/coca_cola.jpg"
+        "image": "/assets/images/coca_cola.jpg",
+        "description": "Refreshing cola drink served chilled"
     },
     {
         "id": 18,
         "name": "Fanta",
         "category": "Drinks",
         "price": 500,
-        "image": "\/assets\/images\/fanta.jpg"
+        "image": "/assets/images/fanta.jpg",
+        "description": "Orange-flavored sparkling drink, served cold"
     },
     {
         "id": 19,
         "name": "Sprite",
         "category": "Drinks",
         "price": 500,
-        "image": "\/assets\/images\/sprite.jpg"
+        "image": "/assets/images/sprite.jpg",
+        "description": "Lemon-lime sparkling drink, refreshing and light"
     },
     {
         "id": 20,
         "name": "Water",
         "category": "Drinks",
         "price": 300,
-        "image": "\/assets\/images\/water.jpg"
+        "image": "/assets/images/water.jpg",
+        "description": "Purified still water, 0 calories"
     }
 ]

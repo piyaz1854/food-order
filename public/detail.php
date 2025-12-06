@@ -13,8 +13,29 @@ foreach ($products as $p) {
 }
 
 $turtleNote = '';
-if ($product && isset($product['category']) && $product['category'] === 'Pizzas') {
-    $turtleNote = "Classic choice for hungry ninja turtles.";
+if ($product && isset($product['category'])) {
+    switch ($product['category']) {
+
+        case 'Pizzas':
+            $turtleNote = "🍕 Classic choice for hungry ninja turtles.";
+            break;
+
+        case 'Burgers':
+            $turtleNote = "🍔 Perfect for heroes who need protein power.";
+            break;
+
+        case 'Salads':
+            $turtleNote = "🥗 Light, fresh, and healthy — balance your ninja energy.";
+            break;
+
+        case 'Drinks':
+            $turtleNote = "🥤 Refresh yourself after a long battle or training.";
+            break;
+
+        default:
+            $turtleNote = "";
+            break;
+    }
 }
 ?>
 
@@ -36,7 +57,12 @@ if ($product && isset($product['category']) && $product['category'] === 'Pizzas'
             <strong>Price:</strong>
             <?= (int)$product['price'] ?> ₸
         </p>
-
+        <?php if (!empty($product['description'])): ?>
+            <p style="font-size:15px; color:#cbd5e1; margin-bottom:12px;">
+                <strong>Ingredients:</strong>
+                <?= htmlspecialchars($product['description']) ?>
+            </p>
+        <?php endif; ?>
         <?php if ($turtleNote): ?>
             <p class="detail-note">
                 🐢 <?= htmlspecialchars($turtleNote) ?>

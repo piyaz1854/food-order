@@ -16,6 +16,9 @@ if (!empty($category)) {
     Browse the menu like a guest. Orders are placed by logged-in staff - just like turtles trust their pizza guy.
   </p>
 
+  <div id="ws-catalog-preview" class="section-subtitle" style="margin-top:6px;"></div>
+  <div id="menu-stats" class="section-subtitle" style="margin-bottom:10px;"></div>
+
   <form method="get">
     <select name="category" onchange="this.form.submit()">
       <option value="" <?= $category === '' ? 'selected' : '' ?>>All Categories</option>
@@ -26,9 +29,36 @@ if (!empty($category)) {
     </select>
   </form>
 
+  <div id="menu-controls" class="menu-controls">
+    <input
+        type="text"
+        id="menu-search"
+        placeholder="Search by name (e.g. Margherita)"
+    >
+
+    <button type="button" id="bigger-pimpin-btn" class="btn btn-secondary">
+      I WANT EAT MORE
+    </button>
+
+    <label class="bling-label">
+      <input type="checkbox" id="bling-checkbox">
+      Bling mode (Snoopify)
+    </label>
+
+    <button type="button" id="sort-price-btn" class="btn btn-secondary">
+      Sort by price ↑
+    </button>
+  </div>
+
   <div class="menu">
     <?php foreach ($products as $item): ?>
-      <div class="card">
+      <div
+        class="card"
+        data-product
+        data-name="<?= htmlspecialchars($item['name'], ENT_QUOTES) ?>"
+        data-category="<?= htmlspecialchars($item['category'], ENT_QUOTES) ?>"
+        data-price="<?= (int)$item['price'] ?>"
+      >
         <img src="<?= htmlspecialchars($item['image']) ?>"
              alt="<?= htmlspecialchars($item['name']) ?>">
         <h3><?= htmlspecialchars($item['name']) ?></h3>
@@ -43,7 +73,7 @@ if (!empty($category)) {
         </form>
 
         <a href="detail.php?name=<?= urlencode($item['name']) ?>">
-          <button style="margin-top:6px;"> More Info</button>
+          <button type="button" style="margin-top:6px;"> More Info</button>
         </a>
       </div>
     <?php endforeach; ?>

@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (!$errors) {
             $id   = count($users) + 1;
-            // first – admin, other – user
             $role = empty($users) ? 'admin' : 'user';
 
             $users[] = [

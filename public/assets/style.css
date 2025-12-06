@@ -1,13 +1,13 @@
-/* Базовое оформление */
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #0b1220; /* темный фон а-ля канализация */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   color: #f9fafb;
 }
 
+
 header {
-  background: #065f46; /* зелёный */
+  background: #065f46; 
   color: #fff;
   padding: 15px;
   text-align: center;
@@ -33,29 +33,42 @@ main {
   margin: 0 auto 40px auto;
 }
 
-/* Баннер на главной */
 .banner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
-  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+  padding: 32px 24px;
   border-radius: 16px;
   background: radial-gradient(circle at top left, #22c55e 0, #0f172a 50%, #020617 100%);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.6);
 }
 
-.banner-left {
-  flex: 1 1 280px;
-  min-width: 260px;
+.banner-hero {
+  position: relative;
 }
 
+.banner-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/turtles2.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.16;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+
+.banner-left,
 .banner-right {
-  flex: 0 0 260px;
-  text-align: center;
+  position: relative;
+  z-index: 1;
 }
+
 
 .banner h2 {
   font-size: 28px;
@@ -87,10 +100,9 @@ main {
   border: 2px solid #22c55e;
 }
 
-/* Кнопки */
 .banner .btn {
   display: inline-block;
-  background: #facc15; /* желтый как сыр */
+  background: #facc15;
   color: #1f2937;
   padding: 10px 20px;
   border-radius: 999px;
@@ -116,7 +128,7 @@ main {
   background: rgba(15,23,42,0.7);
 }
 
-/* Блоки на главной */
+
 .home-section {
   margin-top: 32px;
 }
@@ -154,7 +166,7 @@ main {
   font-size: 15px;
 }
 
-/* Секция “как это работает” */
+
 .steps {
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +198,7 @@ main {
   font-weight: bold;
 }
 
-/* Каталог / карточки меню (оставляем твою структуру, только стилизуем) */
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -218,7 +230,6 @@ main {
   font-size: 16px;
 }
 
-/* Формы */
 form {
   max-width: 320px;
   margin: 20px auto;
@@ -257,7 +268,6 @@ button:hover {
   color: #f97316;
 }
 
-/* Footer */
 footer {
   background: #020617;
   color: #9ca3af;
@@ -267,7 +277,7 @@ footer {
 }
 
 
-/* Detail page */
+
 
 .detail-section {
   text-align: center;
@@ -277,7 +287,7 @@ footer {
 }
 
 .card-detail {
-  width: 380px;           /* шире рамка */
+  width: 380px; 
   max-width: 100%;
   padding: 16px;
   border-radius: 16px;
@@ -289,7 +299,7 @@ footer {
 }
 
 .card-detail img {
-  width: 100%;            /* картинка по ширине карточки */
+  width: 100%;
   height: auto;
   max-height: 280px;
   object-fit: cover;
@@ -301,4 +311,282 @@ footer {
   font-size: 13px;
   color: #bbf7d0;
   margin-bottom: 12px;
+}
+
+
+
+.btn-pressed {
+  transform: translateY(1px);
+  box-shadow: none !important;
+}
+
+
+.dynamic-tips {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tip-badge {
+  background: #020617;
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid #16a34a;
+  font-size: 12px;
+}
+
+/* подсветка дорогих блюд */
+.card-expensive {
+  border-color: #f97316;
+  box-shadow: 0 0 16px rgba(249,115,22,0.7);
+}
+/* Контролы меню */
+.menu-controls {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+#menu-search {
+  max-width: 230px;
+  flex: 1 1 180px;
+}
+
+.bling-label {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Эффект bling-режима */
+body.bling-mode {
+  background: radial-gradient(circle at top, #facc15 0, #0b1220 40%, #020617 100%);
+}
+
+/* hover эффект для карточек */
+.card {
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.card-hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+}
+
+/* эффект нажатия кнопки */
+.btn-pressed {
+  transform: translateY(1px);
+  box-shadow: none !important;
+}
+
+
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #facc15;
+  color: #111827;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  z-index: 9999;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.toast-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-hide {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.6);
+  }
+  70% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 12px rgba(250, 204, 21, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(250, 204, 21, 0);
+  }
+}
+
+.btn-pulsate {
+  animation: pulsate 0.6s ease-out;
+}
+
+
+@keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-appear {
+  animation: cardAppear 0.4s ease-out forwards;
+}
+
+.page-content {
+  max-width: 1100px;
+  margin: 16px auto 40px auto;
+  padding: 24px 16px 40px;
+  background: rgba(15, 23, 42, 0.90);
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
+}
+
+
+textarea {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+
+.maze {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px;
+  background: #020617;
+  border-radius: 12px;
+  border: 2px solid #4ade80;
+}
+
+.maze-row {
+  display: flex;
+}
+
+.maze-cell {
+  width: 90px;
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  background: #0b1120;
+}
+
+
+.maze-start {
+  background: #16a34a;
+  font-weight: bold;
+  border-radius: 6px 0 0 6px;
+}
+
+.maze-end {
+  background: #facc15;
+  color: #111827;
+  font-weight: bold;
+  border-radius: 0 6px 6px 0;
+}
+
+
+.maze-wall {
+  position: relative;
+  background: transparent;
+}
+
+
+.maze-wall::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 6px;
+  background: #16a34a;
+  box-shadow: 0 0 8px rgba(22, 163, 74, 0.7);
+}
+
+.maze-wall:hover::before {
+  background: #b91c1c;
+  box-shadow: 0 0 10px rgba(185, 28, 28, 0.9);
+}
+
+
+.maze-wall-hit::before {
+  background: #b91c1c !important;
+  box-shadow: 0 0 10px rgba(185, 28, 28, 0.9) !important;
+}
+
+
+.maze-controls {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+#maze-status {
+  font-size: 13px;
+}
+
+
+.site-header {
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+/*фон*/
+
+.page-home {
+  background-image: url("../assets/images/turtles5.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.page-menu {
+  background-image: url("../assets/images/turtles3.jpg");
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.page-admin {
+  background-image: url("../assets/images/turtles4.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page-content {
+  background: rgba(15, 23, 42, 0.90);
+  padding: 24px 16px 40px;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
 }
