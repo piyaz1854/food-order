@@ -35,7 +35,6 @@ elseif ($current === "admin.php") {
   <script src="../assets/js/events.js" defer></script>
 </head>
 
-<!-- добавляем динамический класс -->
 <body class="<?= $pageClass ?>">
 
 <header class="site-header">
