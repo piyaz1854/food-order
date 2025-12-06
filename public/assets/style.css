@@ -590,3 +590,27 @@ textarea {
   border-radius: 16px;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
 }
+.page-login {
+  background-image: url("../assets/images/turtles6.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page-register {
+  background-image: url("../assets/images/turtles6.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page-login .page-content,
+.page-register .page-content {
+  margin-top: 120px;
+  background: rgba(15, 23, 42, 0.92);
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 500px;
+}

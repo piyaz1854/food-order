@@ -6,18 +6,27 @@ require_once __DIR__ . '/auth.php';
 
 $pageTitle = $pageTitle ?? 'FoodOrder';
 
-$current = basename($_SERVER['PHP_SELF']);
+$currentPage = basename($_SERVER['PHP_SELF']);
 
-$pageClass = "";
-
-if ($current === "index.php") {
-    $pageClass = "page-home";
-}
-elseif ($current === "catalog.php") {
-    $pageClass = "page-menu";
-}
-elseif ($current === "admin.php") {
-    $pageClass = "page-admin";
+$bodyClass = '';
+switch ($currentPage) {
+    case 'index.php':
+        $bodyClass = 'page-home';
+        break;
+    case 'catalog.php':
+        $bodyClass = 'page-menu';
+        break;
+    case 'admin.php':
+        $bodyClass = 'page-admin';
+        break;
+    case 'login.php':
+        $bodyClass = 'page-login';
+        break;
+    case 'register.php':
+        $bodyClass = 'page-register';
+        break;
+    default:
+        $bodyClass = '';
 }
 ?>
 <!DOCTYPE html>
@@ -35,8 +44,7 @@ elseif ($current === "admin.php") {
   <script src="../assets/js/events.js" defer></script>
 </head>
 
-<body class="<?= $pageClass ?>">
-
+<body class="<?= $bodyClass ?>">
 <header class="site-header">
   <div class="header-inner">
     <a href="index.php" class="logo">
@@ -61,4 +69,5 @@ elseif ($current === "admin.php") {
     </nav>
   </div>
 </header>
+
 <main class="page-content">
